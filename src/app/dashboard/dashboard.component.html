@@ -1,0 +1,44 @@
+<div class="container">
+<div class="barContainer" ng-controller="AppCtrl">
+    <div class="pb-4">
+        <ul>
+            <li>Budget : <code ng-non-bindable>{{"{{budget.montant}}"}}</code></li>
+            <li>Piece Selectionnée : <code ng-non-bindable>{{"{{selectedRoom}}"}}</code></li>
+            <li class="text-right">
+                <mat-form-field class="example-chip-list" appearance="fill">
+                    <mat-label>Filtrer Par :</mat-label>
+                    <mat-chip-list #chipList aria-label="Fruit selection">
+                      <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+                        {{fruit.name}}
+                        <button matChipRemove>
+                          <mat-icon>cancel</mat-icon>
+                        </button>
+                      </mat-chip>
+                      <input placeholder="Nouveau filtre..."
+                             [matChipInputFor]="chipList"
+                             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                             [matChipInputAddOnBlur]="addOnBlur"
+                             (matChipInputTokenEnd)="add($event)">
+                    </mat-chip-list>
+                  </mat-form-field>
+            </li>
+        </ul>
+    </div>
+    <div><p>Répartition de votre budget</p></div> 
+    <div class="slider">
+      <!-- <div><p>Répartition de votre budget</p></div>   -->
+    </div>
+    <div class="bar">
+      <div class="blue"></div>
+      <div class="green"></div>
+      <div class="yellow"></div>
+      <div class="red"></div>
+    </div> 
+    <div class="value">
+      <div><p>Articles</p></div>
+      <div><p>Livraison</p></div>
+      <div><p>Services</p></div>
+      <div><p>Pot de vin</p></div>
+    </div>
+  </div>
+</div>
