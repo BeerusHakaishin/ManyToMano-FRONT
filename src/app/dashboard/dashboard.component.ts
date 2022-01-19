@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material/chips';
 
+
 import { Fruit } from './fruit.model';
 
 @Component({
@@ -10,6 +11,8 @@ import { Fruit } from './fruit.model';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  selected = '';
+
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   fruits: Fruit[] = [{name: 'Frais de port gratuit'}, {name: 'Couleur'}];

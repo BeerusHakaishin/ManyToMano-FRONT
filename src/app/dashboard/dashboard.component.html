@@ -5,8 +5,8 @@
             <li>Budget : <code ng-non-bindable>{{"{{budget.montant}}"}}</code></li>
             <li>Piece Selectionnée : <code ng-non-bindable>{{"{{selectedRoom}}"}}</code></li>
             <li class="text-right">
-                <mat-form-field class="example-chip-list" appearance="fill">
-                    <mat-label>Filtrer Par :</mat-label>
+                <!-- <mat-form-field class="example-chip-list" appearance="fill">
+                    <mat-label>Trier Par :</mat-label>
                     <mat-chip-list #chipList aria-label="Fruit selection">
                       <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)">
                         {{fruit.name}}
@@ -14,13 +14,23 @@
                           <mat-icon>cancel</mat-icon>
                         </button>
                       </mat-chip>
-                      <input placeholder="Nouveau filtre..."
+                      <input placeholder="Nouveau tag..."
                              [matChipInputFor]="chipList"
                              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
                              [matChipInputAddOnBlur]="addOnBlur"
                              (matChipInputTokenEnd)="add($event)">
                     </mat-chip-list>
+                  </mat-form-field> -->
+                  <mat-form-field appearance="fill">
+                    <mat-label>Trier par</mat-label>
+                    <mat-select [(value)]="selected">
+                      <mat-option>Aucun</mat-option>
+                      <mat-option value="Frais de port Gratuit">Frais de port gratuit</mat-option>
+                      <mat-option value="En soldes">En soldes</mat-option>
+                    </mat-select>
                   </mat-form-field>
+                  
+                  <p>Filtres: {{selected}}</p>
             </li>
         </ul>
     </div>
@@ -38,7 +48,15 @@
       <div><p>Articles</p></div>
       <div><p>Livraison</p></div>
       <div><p>Services</p></div>
-      <div><p>Pot de vin</p></div>
+      <!-- <div><p>Pot de vin</p></div> -->
     </div>
   </div>
+</div>
+
+<div class="container panier mt-4 pt-2">
+    <mat-icon>local_grocery_store</mat-icon>Panier
+</div>
+
+<div class="container panier mt-4 pt-2">
+    <mat-icon>local_grocery_store</mat-icon>Panier
 </div>
