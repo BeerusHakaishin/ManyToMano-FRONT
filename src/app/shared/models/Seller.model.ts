@@ -1,8 +1,8 @@
 export class Seller {
   id!: number;
   name!: string;
-  shipping_fees: number;
-  logo_url: String;
+  shipping_fees!: number;
+  logo_url!: String;
   constructor(
     id: number,
     name: string,
