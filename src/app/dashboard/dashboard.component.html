@@ -1,62 +1,61 @@
-<div class="container">
-<div class="barContainer" ng-controller="AppCtrl">
-    <div class="pb-4">
-        <ul>
-            <li>Budget : <code ng-non-bindable>{{"{{budget.montant}}"}}</code></li>
-            <li>Piece Selectionnée : <code ng-non-bindable>{{"{{selectedRoom}}"}}</code></li>
-            <li class="text-right">
-                <!-- <mat-form-field class="example-chip-list" appearance="fill">
-                    <mat-label>Trier Par :</mat-label>
-                    <mat-chip-list #chipList aria-label="Fruit selection">
-                      <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)">
-                        {{fruit.name}}
-                        <button matChipRemove>
-                          <mat-icon>cancel</mat-icon>
-                        </button>
-                      </mat-chip>
-                      <input placeholder="Nouveau tag..."
-                             [matChipInputFor]="chipList"
-                             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                             [matChipInputAddOnBlur]="addOnBlur"
-                             (matChipInputTokenEnd)="add($event)">
-                    </mat-chip-list>
-                  </mat-form-field> -->
-                  <mat-form-field appearance="fill">
-                    <mat-label>Trier par</mat-label>
-                    <mat-select [(value)]="selected">
-                      <mat-option>Aucun</mat-option>
-                      <mat-option value="Frais de port Gratuit">Frais de port gratuit</mat-option>
-                      <mat-option value="En soldes">En soldes</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-                  
-                  <p>Filtres: {{selected}}</p>
-            </li>
-        </ul>
+<div class="container pb-5">
+  <div class="row">
+    <p>Budget : <code ng-non-bindable>{{"{{budget.montant}}"}}</code></p>
+    <p>Piece Selectionnée : <code ng-non-bindable>{{"{{selectedRoom}}"}}</code></p>
+    <br>
+
+    <div class="d-flex pt-3">
+      <mat-form-field appearance="fill">
+        <mat-label>Trier par</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>Aucun</mat-option>
+          <mat-option value="Frais de port Gratuit">Frais de port gratuit</mat-option>
+          <mat-option value="En soldes">En soldes</mat-option>
+        </mat-select>
+      </mat-form-field>
+      {{selected}}
     </div>
-    <div><p>Répartition de votre budget</p></div> 
-    <div class="slider">
-      <!-- <div><p>Répartition de votre budget</p></div>   -->
+    
+
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
-    <div class="bar">
-      <div class="blue"></div>
-      <div class="green"></div>
-      <div class="yellow"></div>
-      <div class="red"></div>
-    </div> 
-    <div class="value">
-      <div><p>Articles</p></div>
-      <div><p>Livraison</p></div>
-      <div><p>Services</p></div>
-      <!-- <div><p>Pot de vin</p></div> -->
+      
+
+  </div>
+  </div>
+
+<div class="container mt-4 pt-2">
+    <mat-icon>local_grocery_store</mat-icon>Panier
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
+
+
+<!-- <div class="container pb-5">
+<div class="row">
+  <p>Budget : <code ng-non-bindable>{{"{{budget.montant}}"}}</code></p>
+  <p>Piece Selectionnée : <code ng-non-bindable>{{"{{selectedRoom}}"}}</code></p>
+  <br>
+  <div class="d-flex pt-3">
+    <mat-form-field appearance="fill">
+      <mat-label>Trier par</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option>Aucun</mat-option>
+        <mat-option value="Frais de port Gratuit">Frais de port gratuit</mat-option>
+        <mat-option value="En soldes">En soldes</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
   </div>
 </div>
-
-<div class="container panier mt-4 pt-2">
-    <mat-icon>local_grocery_store</mat-icon>Panier
-</div>
-
-<div class="container panier mt-4 pt-2">
-    <mat-icon>local_grocery_store</mat-icon>Panier
-</div>
+</div> -->
