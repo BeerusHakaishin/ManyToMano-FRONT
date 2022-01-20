@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+// Ici j'import l'url de mon back depuis l'environment
 import { url } from 'src/environments/environment';
 
 // Import necessary models below 
