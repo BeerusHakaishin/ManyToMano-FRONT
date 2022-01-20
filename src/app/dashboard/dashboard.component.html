@@ -1,3 +1,4 @@
+
 <div class="container mt-4 pb-5">
   <div class="row">
     <p>Budget : <code ng-non-bindable>{{"{{budget.montant}}"}}</code></p>
@@ -139,4 +140,12 @@
 <div class="container mt-4 pt-2 pb-2 details-product">
   <img src="http://placehold.it/"/>
   Inclure l'image du détail produit en screenShot
+</div>
+
+<!-- HERE EXAMPLE FOR RECUP DATA FROM BACK PROVIDE TO SERVICE  -->
+<div class="container" style="background-color: blue;">
+  <li *ngFor="let room of rooms">
+    Here Illustrate how use data from back provide to service 
+    <span class="badge">{{room.id}}</span>{{room.name}}
+  </li>
 </div>

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 // Ici j'import l'url de mon back depuis l'environment
@@ -21,7 +21,7 @@ export class ManyToManoService {
   constructor(private http: HttpClient) { }
 ////////////////////////////////// GET ALL METHODS BELOW //////////////////////////////////
   // Pour récuperer toutes les rooms 
-  public getAllRooms(): Observable<Room[]> {
+  public getRooms(): Observable<Room[]> {
     return this.http.get<Room[]>(url + 'rooms');
   }
 
@@ -30,9 +30,8 @@ export class ManyToManoService {
     return this.http.get<Category[]>(url + 'categories');
   }
 
-  // Pour récuperer toutes les articles
-  public getAllArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>(url + 'articles');
+  getArticles(): Observable<Article[]> {
+    return this.http.get<Article[]>(url + 'articles')
   }
 
   // Pour récuperer toutes les inspirations
