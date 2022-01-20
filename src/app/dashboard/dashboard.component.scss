@@ -1,6 +1,8 @@
-  .container{
+  
+  .container{ 
       border: 1px solid rgba(255, 255, 255, 0);
       box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      background-color: whitesmoke;
   }
   
   .example-chip-list {
@@ -9,6 +11,11 @@
 
   .quantityInput{
     width: 10%;
+    transition: 0.1s;
+    border: solid black 1px;
+  }
+  .quantityInput:hover{
+    box-shadow: 1px 1px 6px black;
   }
 
 .checkboxGroup{
@@ -36,6 +43,43 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
+.card-img-top{
+ 
+  width: 200px;
+}
+
+.form-select{
+  color: rgba(0, 0, 0, 0.541);
+  transition: 0.1s;
+}
+
+.form-select:hover{
+  color: black;
+}
+
+.form-check-input{
+  border: solid black 1px;
+  transition: 0.1s
+}
+
+.form-check-input:hover{
+  box-shadow:2px 2px 6px black;
+  
+}
+
+.buttonDelete{
+  transition: 0.1s;
+}
+
+.buttonDelete:hover{
+  box-shadow:2px 2px 6px black;
+  background-color: white;
+  color: #3f51b5;
+}
+
+.blocktext{
+  padding: 5px 10px;
+}
 
 
 

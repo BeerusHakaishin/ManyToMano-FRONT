@@ -1,17 +1,18 @@
+
 <div class="container mt-4 pb-5">
   <div class="row">
     <p>Budget : <code ng-non-bindable>{{"{{budget.montant}}"}}</code></p>
     <p>Piece Selectionnée : <code ng-non-bindable>{{"{{selectedRoom}}"}}</code></p>
     <br>
 
-    <div class="d-flex pt-3 mb-5">
+    <!--<div class="d-flex pt-3 mb-5">
       <select class="form-select" aria-label="Default select example">
         <option selected>Open this select menu</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
-    </div>
+    </div>-->
     
 
     <div class="progress">
@@ -29,6 +30,9 @@
     <mat-icon>local_grocery_store</mat-icon>Panier
     <!-- One card  -->
     <div class="card w-75 mt-4">
+      <div class="card">
+        <img class="card-img-top" src="\assets\images\bricoleur.jpg" alt="Card image cap">
+      </div>
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -40,11 +44,14 @@
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Confier l'installation à nos pros</label>
         </div>
-        <a href="#" mat-flat-button color="primary">Supprimer <mat-icon>delete</mat-icon></a>
+        <a href="#" class="buttonDelete" mat-flat-button color="primary">Supprimer <mat-icon>delete</mat-icon></a>
       </div>
     </div>
 <!-- One card  -->
     <div class="card w-75 mt-4 mb-4">
+      <div class="card">
+        <img class="card-img-top" src="\assets\images\bricoleur.jpg" alt="Card image cap">
+      </div>
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -56,7 +63,7 @@
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Confier l'installation à nos pros</label>
         </div>
-        <a href="#" mat-flat-button color="primary">Supprimer <mat-icon>delete</mat-icon></a>
+        <a href="#" class="buttonDelete"  mat-flat-button color="primary">Supprimer <mat-icon>delete</mat-icon></a>
       </div>
     </div>  
     <tr>
@@ -64,7 +71,7 @@
       <td th:text="${totalTTC}"> <code ng-non-bindable>{{"{{montant}}"}}</code></td>
     </tr>
     <tr class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <td><button mat-flat-button color="primary" class="mt-2">Valider</button></td>
+      <td><button mat-flat-button color="primary"  class="mt-2 buttonDelete ">Valider</button></td>
     </tr>
 </div>
 
@@ -139,4 +146,12 @@
 <div class="container mt-4 pt-2 pb-2 details-product">
   <img src="http://placehold.it/"/>
   Inclure l'image du détail produit en screenShot
+</div>
+
+<!-- HERE EXAMPLE FOR RECUP DATA FROM BACK PROVIDE TO SERVICE  -->
+<div class="container" style="background-color: blue;">
+  <li *ngFor="let room of rooms">
+    Here Illustrate how use data from back provide to service 
+    <span class="badge">{{room.id}}</span>{{room.name}}
+  </li>
 </div>
