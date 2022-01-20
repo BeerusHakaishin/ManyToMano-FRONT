@@ -3,19 +3,23 @@
 
 <div class="container mt-4 pt-4 mb-2 d-flex justify-content-center">
   <drag-scroll>
-    <img drag-scroll-item src="assets/img/M1.jpeg" />
-    <img drag-scroll-item src="assets/img/M2.png" />
+    <img drag-scroll-item src="assets/images/M1.jpeg" />
+    <img drag-scroll-item src="assets/images/M2.png" />
   </drag-scroll>
 </div>
 <div class="d-flex justify-content-center">
-  <button (click)="moveLeft()">Précédent</button>
-  <button (click)="moveRight()">Suivant</button>
+  <button (click)="moveLeft()">
+    <img class="leftArrow" src="/assets/images/leftArrow.png" />
+  </button>
+  <button (click)="moveRight()">
+    <img class="rightArrow" src="/assets/images/rightArrow.png" />
+  </button>
 </div>
 <!-- Panier Section  -->
 <div class="container mt-4 pt-2 mb-5">
   <p>Retrouvez nos articles ci-dessous :</p>
   <!-- One card  -->
-  <div class="card w-75 mt-4 pb-2">
+  <div class="card w-100 mt-4 pb-2">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">
