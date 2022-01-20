@@ -8,19 +8,20 @@ import { MatSliderModule } from '@angular/material/slider';
 
 // Component's import below
 import { AppComponent } from './app.component';
-
+import { InspirationComponent } from './inspiration/inspiration.component';
+import { MainCarouselComponent } from './main-carousel/main-carousel.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, InspirationComponent, MainCarouselComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    DragScrollModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
