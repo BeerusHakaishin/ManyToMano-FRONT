@@ -9,6 +9,9 @@ import { Category } from '../models/Category.model';
 import { Room } from '../models/Room.model';
 import { Article } from '../models/Article.model';
 import { Cart } from '../models/Cart.model';
+import { Inspiration } from '../models/Inspiration.model';
+import { Seller } from '../models/Seller.model';
+import { CartLine } from '../models/CartLine.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +19,7 @@ import { Cart } from '../models/Cart.model';
 export class ManyToManoService {
 
   constructor(private http: HttpClient) { }
-
+////////////////////////////////// GET ALL METHODS BELOW //////////////////////////////////
   // Pour récuperer toutes les rooms 
   public getAllRooms(): Observable<Room[]> {
     return this.http.get<Room[]>(url + 'rooms');
@@ -33,21 +36,33 @@ export class ManyToManoService {
   }
 
   // Pour récuperer toutes les inspirations
-
+  public getAllInspirations(): Observable<Inspiration[]> {
+    return this.http.get<Inspiration[]>(url + 'inspirations');
+  }
 
   // Pour récuperer tout les seller 
-
+  public getAllSellers(): Observable<Seller[]> {
+    return this.http.get<Seller[]>(url + 'sellers');
+  }
 
   // Pour récuperer toute les articles commandés (cart-line)
+  public getCartLine(): Observable<CartLine[]> {
+    return this.http.get<CartLine[]>(url + 'sellers');
+  }
 
-
+  ////////////////////////////////// GET ONE METHODS BELOW //////////////////////////////////
   // Pour récuperer le panier 
   public getCart(): Observable<Cart[]> {
     return this.http.get<Cart[]>(url + 'cart');
   }
 
-  // Pour récuperer tout les articles d'une category id
+  // Pour récuperer une catégorie (et sa liste d'articles correspondant)
+  public getOneCategoryById(): Observable<Category[]> {
+    return this.http.get<Category[]>(url + 'categories/{id}');
+  }
 
   // Pour récuperer un article by id
-
+  public getArticleById(): Observable<Article[]> {
+    return this.http.get<Article[]>(url + 'articles/{id}');
+  }
 }
