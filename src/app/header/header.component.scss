@@ -25,10 +25,19 @@
     position: relative;
 }
 
+.manoLimits{
+  transition: 0.3s;
+}
+
+.manoLimits:hover{
+  background-color: rgba(0, 0, 0, 0.116);
+}
+
 .casque {
 position: absolute;
 left: 5px;
 }
+
 
 .svg_9c8206b6 {
     display: inline-block;
