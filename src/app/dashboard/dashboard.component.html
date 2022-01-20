@@ -1,19 +1,16 @@
-<div class="container pb-5">
+<div class="container mt-4 pb-5">
   <div class="row">
     <p>Budget : <code ng-non-bindable>{{"{{budget.montant}}"}}</code></p>
     <p>Piece Selectionnée : <code ng-non-bindable>{{"{{selectedRoom}}"}}</code></p>
     <br>
 
-    <div class="d-flex pt-3">
-      <mat-form-field appearance="fill">
-        <mat-label>Trier par</mat-label>
-        <mat-select [(value)]="selected">
-          <mat-option>Aucun</mat-option>
-          <mat-option value="Frais de port Gratuit">Frais de port gratuit</mat-option>
-          <mat-option value="En soldes">En soldes</mat-option>
-        </mat-select>
-      </mat-form-field>
-      {{selected}}
+    <div class="d-flex pt-3 mb-5">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
     </div>
     
 
@@ -31,26 +28,28 @@
 <div class="container mt-4 pt-2 pb-2">
     <mat-icon>local_grocery_store</mat-icon>Panier
     <!-- One card  -->
-    <div class="card w-75">
+    <div class="card w-75 mt-4">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Button</a>
+        <a href="#" mat-flat-button color="primary">Button</a>
       </div>
     </div>
 <!-- One card  -->
-    <div class="card w-75">
+    <div class="card w-75 mt-4 mb-4">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Button</a>
+        <a href="#" mat-flat-button color="primary">Button</a>
       </div>
     </div>  
     <tr>
       <td><strong>Total TTC</strong></td>
-      <td class="text-right" th:text="${totalTTC}"> <code ng-non-bindable>{{"{{montant}}"}}</code></td>
-      <td><button mat-flat-button color="primary" class="mt-2">Basic</button></td>
-  </tr>
+      <td th:text="${totalTTC}"> <code ng-non-bindable>{{"{{montant}}"}}</code></td>
+    </tr>
+    <tr class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <td><button mat-flat-button color="primary" class="mt-2">Valider</button></td>
+    </tr>
 </div>
 
 
