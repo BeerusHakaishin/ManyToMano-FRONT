@@ -14,8 +14,22 @@ export class ManyToManoService {
 
   constructor(private http: HttpClient) { }
 
-  // Pour récuperer toutes les catégories d'une room 
+
+  // Pour récuperer toutes les rooms 
+
+  // Pour récuperer toutes les catégories 
   public getRoomCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(url + 'categories');
   }
+
+  // Pour récuperer toutes les catégories
+
+  // Pour récuperer toutes les inspirations
+
+  // Pour récuperer tout les seller 
+
+  // Pour récuperer tout les articles d'une category id
+
+  // Pour récuperer un article by id
+
 }
