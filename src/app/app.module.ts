@@ -22,8 +22,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ManoLimitStepOneComponent } from './mano-limit-step-one/mano-limit-step-one.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import { Inspiration2Component } from './inspiration2/inspiration2.component';
+import { InspirationPanierComponent } from './inspiration-panier/inspiration-panier.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ManoLimitStepOneComponent,
     InspirationComponent,
     MainCarouselComponent,
+    Inspiration2Component,
+    InspirationPanierComponent,
   ],
   imports: [
     BrowserModule,
