@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { DragScrollComponent } from 'ngx-drag-scroll';
 
 @Component({
   selector: 'app-inspiration',
   templateUrl: './inspiration.component.html',
-  styleUrls: ['./inspiration.component.scss']
+  styleUrls: ['./inspiration.component.scss'],
 })
 export class InspirationComponent implements OnInit {
+  @ViewChild('nav', { read: DragScrollComponent }) ds!: DragScrollComponent;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  moveLeft() {
+    this.ds.moveLeft();
   }
 
+  moveRight() {
+    this.ds.moveRight();
+  }
+
+  moveTo(index: number) {
+    this.ds.moveTo(index);
+  }
+
+  ngAfterViewInit() {
+    // Starting ngx-drag-scroll from specified index(3)
+    setTimeout(() => {
+      this.ds.moveTo(3);
+    }, 0);
+  }
+  constructor() {}
+
+  ngOnInit(): void {}
 }
