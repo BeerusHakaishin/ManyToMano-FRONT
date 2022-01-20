@@ -1,1 +1,43 @@
+<h2 class="d-flex justify-content-center pt-4">Trouver l'inspiration</h2>
+<p class="subtitle d-flex justify-content-center">Grâce à nos architectes !</p>
 
+<div class="container mt-4 pt-4 mb-2 d-flex justify-content-center">
+  <drag-scroll>
+    <img drag-scroll-item src="assets/img/M1.jpeg" />
+    <img drag-scroll-item src="assets/img/M2.png" />
+  </drag-scroll>
+</div>
+<div class="d-flex justify-content-center">
+  <button (click)="moveLeft()">Précédent</button>
+  <button (click)="moveRight()">Suivant</button>
+</div>
+<!-- Panier Section  -->
+<div class="container mt-4 pt-2 mb-5">
+  <p>Retrouvez nos articles ci-dessous :</p>
+  <!-- One card  -->
+  <div class="card w-75 mt-4 pb-2">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        With supporting text below as a natural lead-in to additional content.
+      </p>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Quantité</label
+        >
+        <input
+          type="number"
+          class="form-control quantityInput"
+          placeholder="1"
+        />
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1"
+          >Confier l'installation à nos pros</label
+        >
+      </div>
+      <a href="#" mat-flat-button color="primary">Ajouter au panier</a>
+    </div>
+  </div>
+</div>
