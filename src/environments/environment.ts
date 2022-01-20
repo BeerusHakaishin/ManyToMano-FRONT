@@ -16,4 +16,4 @@ export const environment = {
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
 
 // Ici pour connecter notre back à notre front Angular  , url ici pour l'exemple , changeras 
-export const url = 'http://localhost:8080/api/';
+export const url = 'http://localhost:8080/';
