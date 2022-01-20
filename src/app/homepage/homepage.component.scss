@@ -4428,7 +4428,6 @@ a.Menu_menuCategoryBannerLink__GCIuv span:first-child {
 }
 /*# sourceMappingURL=64921b9cd057f6d9.css.map*/
 
-
 .AdviceCard_card__vITlJ {
   position: relative;
   z-index: 0;
@@ -7387,7 +7386,7 @@ body.didomi-popup-open-ios {
   margin-inline-end: 0;
   margin-inline-start: 0;
   margin: 0;
-  marker-offset: auto;
+  offset: auto;
   mask-clip: border-box;
   mask-composite: add;
   mask-image: none;
@@ -8193,7 +8192,7 @@ button span {
 #didomi-host
   #didomi-notice.didomi-regular-notice.shape-banner
   #buttons.multiple {
-  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 #didomi-host
   #didomi-notice.didomi-regular-notice.shape-banner
@@ -8574,7 +8573,7 @@ button span {
   display: flex;
   align-items: center;
   justify-content: center;
-  -ms-flex-direction: column;
+  flex-direction: column;
   height: 100%;
   max-height: 100vh;
 }
@@ -9248,7 +9247,7 @@ button span {
   display: flex;
   align-items: center;
   justify-content: center;
-  -ms-flex-direction: column;
+  flex-direction: column;
 }
 #didomi-host
   .didomi-consent-popup__backdrop.didomi-support-full-height.didomi-max-height-reached
@@ -10447,7 +10446,7 @@ button span {
 .didomi-consent-popup-body::-webkit-scrollbar-thumb,
 .didomi-popup-notice-text-container::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   background-color: lightgray;
 }
 
