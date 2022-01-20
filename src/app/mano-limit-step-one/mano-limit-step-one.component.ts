@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { imageUrl } from 'src/environments/environment';
 
 @Component({
   selector: 'app-mano-limit-step-one',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mano-limit-step-one.component.scss']
 })
 export class ManoLimitStepOneComponent implements OnInit {
+  imageUrl : string = imageUrl
 
   constructor() { }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
+import { imageUrl } from 'src/environments/environment';
 
 @Component({
   selector: 'app-main-carousel',
@@ -8,6 +9,7 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
 })
 export class MainCarouselComponent implements OnInit {
   @ViewChild('nav', { read: DragScrollComponent }) ds!: DragScrollComponent;
+  imageUrl : string = imageUrl
 
   moveLeft() {
     this.ds.moveLeft();
