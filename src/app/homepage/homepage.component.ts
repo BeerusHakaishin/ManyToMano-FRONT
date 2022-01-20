@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { imageUrl } from 'src/environments/environment';
 
 @Component({
   selector: 'app-homepage',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
+  imageUrl : string = imageUrl;
 
   constructor() { }
 

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from '../shared/models/Article.model';
+import { Room } from '../shared/models/Room.model';
+import { ManyToManoService } from '../shared/services/many-to-mano.service';
+import { imageUrl } from 'src/environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,8 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   selected = '';
+  articles: Article[] = [];
+  rooms: Room[] = [];
+  imageUrl : string = imageUrl;
+
+  constructor(private manyToManyService : ManyToManoService){}
 
   ngOnInit(): void {
+    this.getArticles();
+    this.getRooms();
   }
 
+  getArticles(): void {
+    this.manyToManyService.getArticles()
+    .subscribe(articles => this.articles = articles);
+  }
+
+  getRooms(): void {
+    this.manyToManyService.getRooms()
+    .subscribe(rooms => this.rooms = rooms);
+  }
+  
 }

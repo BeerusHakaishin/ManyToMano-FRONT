@@ -10,6 +10,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 // Component's import below
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Inspiration2Component } from './inspiration2/inspiration2.component';
 import { InspirationPanierComponent } from './inspiration-panier/inspiration-panier.component';
+import { ManyToManoService } from './shared/services/many-to-mano.service';
 
 @NgModule({
   declarations: [
@@ -49,8 +51,9 @@ import { InspirationPanierComponent } from './inspiration-panier/inspiration-pan
     MatIconModule,
     MatSelectModule,
     MatButtonModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ManyToManoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
