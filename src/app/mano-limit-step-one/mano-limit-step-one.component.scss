@@ -1,0 +1,110 @@
+.contentAll{
+    background-color: #F5F6F7;
+    height: 100%;
+}
+
+.content{
+    height: 100%;
+}
+
+.contentImage{
+    padding-top: 5px;
+    height: 30%;
+    margin-bottom: 10px;
+}
+
+.banner{
+    height: 100%;
+}
+
+.contentBottom{
+    height: auto;
+}
+
+.sentenceTop{
+    font-family: 'Open Sans', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 0;
+    font-size: 130%;
+    color: #0C193A;
+    text-shadow:5px 2px 7px rgba(0, 0, 0, 0.377) ;
+    
+}
+
+.sentenceBottom{
+    color: #010207af;
+}
+
+.formSearch{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 80%;
+    border-radius: 3px;
+    box-shadow: 5px 2px 7px rgba(0, 0, 0, 0.377);
+    
+
+}
+
+.formGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 50px 20px;
+}
+
+.formInputTop{
+ flex: 1;
+}
+
+.formSearchBottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ButtonSearchForm{
+    border-radius: 3px;
+    color: blanchedalmond;
+    background: linear-gradient(#00ECCD, #0397A7);
+    padding: 10px 25px;
+    
+
+}
+
+.inspirationSearch{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 80%;
+    border-radius: 3px;
+    box-shadow: 5px 2px 7px rgba(0, 0, 0, 0.377);
+    
+}
+
+.inspirationSearchImage{
+    flex: 1;
+    height: 160px;
+    width: 70%;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.contentInspirationButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtoninspirationSearch{
+    
+    border-radius: 3px;
+    color: blanchedalmond;
+    background: linear-gradient(#00ECCD, #0397A7);
+    padding: 10px 25px;
+}

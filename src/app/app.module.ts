@@ -9,12 +9,14 @@ import { MatSliderModule } from '@angular/material/slider';
 // Component's import below
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { ManoLimitStepOneComponent } from './mano-limit-step-one/mano-limit-step-one.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ManoLimitStepOneComponent
   ],
   imports: [
     BrowserModule,
