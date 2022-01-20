@@ -9,12 +9,14 @@ import { MatSliderModule } from '@angular/material/slider';
 // Component's import below
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
