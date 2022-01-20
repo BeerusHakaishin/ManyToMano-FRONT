@@ -56,6 +56,16 @@
  flex: 1;
 }
 
+.formSelect{
+    color: rgba(0, 0, 0, 0.61);
+    transition: 0.1s
+}
+
+.formSelect:hover{
+    color: black;
+    padding: 10px;
+}
+
 .formSearchBottom{
     display: flex;
     align-items: center;
@@ -65,11 +75,18 @@
 
 .ButtonSearchForm{
     border-radius: 3px;
-    color: blanchedalmond;
+    color: black;
     background: linear-gradient(#00ECCD, #0397A7);
     padding: 10px 25px;
+    transition: 0.1s
     
 
+}
+
+.ButtonSearchForm:hover{
+    padding: 12px 27px; 
+    background: linear-gradient(#0e8878, #057f8d);
+    color: white;
 }
 
 .inspirationSearch{
@@ -104,7 +121,15 @@
 .ButtoninspirationSearch{
     
     border-radius: 3px;
-    color: blanchedalmond;
+    color: black;
     background: linear-gradient(#00ECCD, #0397A7);
     padding: 10px 25px;
+    transition: 0.1s
 }
+
+.ButtoninspirationSearch:hover{
+    padding: 12px 27px; 
+    background: linear-gradient(#0e8878, #057f8d);
+    color: white;
+}
+
