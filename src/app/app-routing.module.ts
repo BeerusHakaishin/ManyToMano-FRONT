@@ -24,8 +24,6 @@ const routes: Routes = [
     component: InspirationComponent,
   },
   { path: 'dashboard', component: DashboardComponent },
-
-  { path: 'inspiration', component: InspirationComponent },
 ];
 
 @NgModule({

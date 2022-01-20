@@ -10,6 +10,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http'
 
 // Component's import below
 import { AppComponent } from './app.component';
@@ -22,7 +23,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ManoLimitStepOneComponent } from './mano-limit-step-one/mano-limit-step-one.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ManyToManoService } from './shared/services/many-to-mano.service';
 
 
 @NgModule({
@@ -47,8 +48,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatSelectModule,
     MatButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ManyToManoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
