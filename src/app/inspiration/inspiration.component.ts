@@ -57,6 +57,5 @@ export class InspirationComponent implements OnInit {
     this.inspirationService
       .getAllInspirations()
       .subscribe((inspirations) => (this.inspirations = inspirations));
-    console.log(this.inspirations);
   }
 }
