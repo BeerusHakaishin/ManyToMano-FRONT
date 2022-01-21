@@ -10,7 +10,7 @@ img {
 button {
   width: 100px;
   border: none;
-  background-color: #f5f6f7;
+  background-color: rgb(236, 236, 236);
 }
 
 .subtitle {
@@ -34,4 +34,14 @@ button {
 .mat-flat-button {
   background-color: #00eccd;
   width: 10% !important;
+}
+
+.logoManoLimits {
+  height: 75px;
+  width: 75px;
+}
+
+.create {
+  border: none;
+  background-color: rgb(236, 236, 236);
 }
