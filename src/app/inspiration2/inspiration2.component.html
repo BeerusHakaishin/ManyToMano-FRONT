@@ -22,4 +22,53 @@
   </button>
   <p class="page pt-3">2/2</p>
 </div>
-<app-inspiration-panier></app-inspiration-panier>
+<div class="container mt-4 pt-2">
+  <p>Retrouvez nos articles ci-dessous :</p>
+  <!-- One card  -->
+  <div *ngFor="let inspiration of inspirations">
+    <ng-container *ngIf="inspiration.name === 'Industriel'">
+      <div
+        *ngFor="let article of articles.slice(5, 9)"
+        class="card w-100 mt-4 mb-2"
+      >
+        <div class="card-body">
+          <h5 class="card-title">{{ article.name }}</h5>
+          <p class="card-text"></p>
+          <p class="card-text">{{ article.price }} €</p>
+          <p class="card-text">Note : {{ article.evaluation }}</p>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Quantité</label
+            >
+
+            <input
+              type="number"
+              class="form-control quantityInput"
+              placeholder="1"
+            />
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Confier l'installation à nos pros</label
+            >
+          </div>
+          <a href="#" mat-flat-button color="primary">Ajouter au panier</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div class="container d-flex justify-content-center pb-4">
+  <button class="create">
+    <a routerLink="/mano-limits"
+      ><img
+        class="logoManoLimits"
+        src="/assets/images/logo_new-casque.png" /></a
+    ><br />Créer votre propre projet
+  </button>
+</div>
