@@ -25,9 +25,7 @@
     font-family: 'Open Sans', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-bottom: 0;
     font-size: 130%;
-    color: #0C193A;
-    text-shadow:5px 2px 7px rgba(0, 0, 0, 0.377) ;
-    
+    color: rgb(30, 60, 135);  
 }
 
 .sentenceBottom{
@@ -38,11 +36,9 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 80%;
+    height: 65%;
     border-radius: 3px;
     box-shadow: 5px 2px 7px rgba(0, 0, 0, 0.377);
-    
-
 }
 
 .formGrid{
@@ -75,12 +71,10 @@
 
 .ButtonSearchForm{
     border-radius: 3px;
-    color: black;
-    background: linear-gradient(#00ECCD, #0397A7);
+    color: white;
+    background:rgb(30, 60, 135);
     padding: 10px 25px;
     transition: 0.1s
-    
-
 }
 
 .ButtonSearchForm:hover{
@@ -92,22 +86,23 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 80%;
+    height: 86%;
     border-radius: 3px;
-    box-shadow: 5px 2px 7px rgba(0, 0, 0, 0.377);
-    
+    box-shadow: 5px 2px 7px rgba(0, 0, 0, 0.377);   
 }
 
 .inspirationSearchImage{
     flex: 1;
-    height: 160px;
-    width: 70%;
-    margin-left: 60px;
+    height: 260px;
+    width: 65%;
+    margin-left: 80px;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 7px;
    
 }
 
@@ -117,18 +112,16 @@
     justify-content: center;
 }
 
-.ButtoninspirationSearch{
-    
+.ButtoninspirationSearch{  
     border-radius: 3px;
-    color: black;
-    background: linear-gradient(#00ECCD, #0397A7);
+    color: white;
+    background: rgb(30, 60, 135);
     padding: 10px 25px;
     transition: 0.1s
 }
 
 .ButtoninspirationSearch:hover{
-    padding: 12px 27px; 
-    background: linear-gradient(#0e8878, #057f8d);
+    background: rgba(30, 60, 135, 0.884);
     color: white;
 }
 

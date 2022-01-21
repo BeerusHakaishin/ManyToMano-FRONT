@@ -29,16 +29,21 @@
 <div class="container mt-4 pt-2 pb-2">
     <mat-icon>local_grocery_store</mat-icon>Panier
     <!-- One card  -->
-    <div class="card w-75 mt-4">
+    <div *ngFor="let article of articles" class="card w-75 mt-4">
       <div class="card">
         <img class="card-img-top" src="\assets\images\bricoleur.jpg" alt="Card image cap">
       </div>
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">{{article.name}}</h5>
+        <p class="card-text">Homelody vous propose cette douchette à mains, équpé d'un bouton STOP. Vous n'aurez plus ce souci. Plus pratique.
+          Lors que vous lavez les cheveaux longs ou les enfants, vous n'avez qu'à l'appuyer et vous aurez le temps pour mettre du gel douche, shampooing et pour vous savonner.</p>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Quantité</label>
           <input type="number" class="form-control quantityInput" placeholder="1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Prix</label>
+          <p>{{article.price}} €</p>
         </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -46,9 +51,13 @@
         </div>
         <a href="#" class="buttonDelete" mat-flat-button color="primary">Supprimer <mat-icon>delete</mat-icon></a>
       </div>
+      <tr>
+        <td><strong>Total TTC</strong></td>
+        <td th:text="${totalTTC}"> {{article.price + "€" }}</td>
+      </tr>
     </div>
 <!-- One card  -->
-    <div class="card w-75 mt-4 mb-4">
+    <!-- <div class="card w-75 mt-4 mb-4">
       <div class="card">
         <img class="card-img-top" src="\assets\images\bricoleur.jpg" alt="Card image cap">
       </div>
@@ -65,13 +74,10 @@
         </div>
         <a href="#" class="buttonDelete"  mat-flat-button color="primary">Supprimer <mat-icon>delete</mat-icon></a>
       </div>
-    </div>  
-    <tr>
-      <td><strong>Total TTC</strong></td>
-      <td th:text="${totalTTC}"> <code ng-non-bindable>{{"{{montant}}"}}</code></td>
-    </tr>
+    </div>   -->
+ 
     <tr class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <td><button mat-flat-button color="primary"  class="mt-2 buttonDelete ">Valider</button></td>
+      <td><button mat-flat-button color="primary" class="mt-2 buttonDelete ">Valider</button></td>
     </tr>
 </div>
 
@@ -149,9 +155,9 @@
 </div>
 
 <!-- HERE EXAMPLE FOR RECUP DATA FROM BACK PROVIDE TO SERVICE  -->
-<div class="container" style="background-color: blue;">
+<!-- <div class="container" style="background-color: blue;">
   <li *ngFor="let room of rooms">
     Here Illustrate how use data from back provide to service 
     <span class="badge">{{room.id}}</span>{{room.name}}
   </li>
-</div>
+</div> -->
