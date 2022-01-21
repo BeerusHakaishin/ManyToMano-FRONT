@@ -31,7 +31,7 @@
     <!-- One card  -->
     <div *ngFor="let article of articles" class="card w-75 mt-4">
       <div class="card">
-        <img class="card-img-top" src="\assets\images\bricoleur.jpg" alt="Card image cap">
+        <img class="card-img-top" src="{{imageUrl+'/'+article.imageUrl}}" alt="Card image cap">
       </div>
       <div class="card-body">
         <h5 class="card-title">{{article.name}}</h5>
@@ -136,8 +136,7 @@
 
 <!-- Detail product section -->
 <div class="container mt-4 pt-2 pb-2 details-product">
-  <img src="http://placehold.it/"/>
-  Inclure l'image du détail produit en screenShot
+  <img src="{{imageUrl}}/details.png"/>
 </div>
 
 
@@ -150,8 +149,7 @@
 
 <!-- Detail accesoires section -->
 <div class="container mt-4 pt-2 pb-2 details-product">
-  <img src="http://placehold.it/"/>
-  Inclure l'image du détail produit en screenShot
+  <img src="{{imageUrl}}/details.png"/>
 </div>
 
 <!-- HERE EXAMPLE FOR RECUP DATA FROM BACK PROVIDE TO SERVICE  -->
