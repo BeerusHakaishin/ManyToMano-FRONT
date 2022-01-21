@@ -49,6 +49,11 @@ export class ManyToManoService {
     return this.http.get<CartLine[]>(url + 'sellers');
   }
 
+  // Pour récuperer tout les articles en solde d'une catégorie (en l'occurence la seule categorie)
+  public getSoldedArticles(): Observable<Article[]> {
+    return this.http.get<Article[]>(url + 'category/{id}/on-sale');
+  }
+
   ////////////////////////////////// GET ONE METHODS BELOW //////////////////////////////////
   // Pour récuperer le panier 
   public getCart(): Observable<Cart[]> {

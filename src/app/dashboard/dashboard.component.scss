@@ -12,10 +12,10 @@
   .quantityInput{
     width: 10%;
     transition: 0.1s;
-    border: solid black 1px;
+    border: solid rgba(0, 0, 0, 0.459) 1px;
   }
   .quantityInput:hover{
-    box-shadow: 1px 1px 6px black;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.356);
   }
 
 .checkboxGroup{
@@ -34,13 +34,13 @@
     margin-left: auto;
     margin-right: auto;
     width  : max-content;
-    height : 30px;
+    height : 35px;
     border-radius: 3px;
     word-break: keep-all;
     font-size : medium;
     background : white;
     color: black;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: rgba(0, 0, 0, 0.185) 0px 5px 7px;;
 }
 
 .card-img-top{
@@ -53,17 +53,15 @@
   transition: 0.1s;
 }
 
-.form-select:hover{
-  color: black;
-}
+
 
 .form-check-input{
-  border: solid black 1px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 3px;
   transition: 0.1s
 }
 
 .form-check-input:hover{
-  box-shadow:2px 2px 6px black;
+  box-shadow:2px 2px 3px rgba(0, 0, 0, 0.432);
   
 }
 
