@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
+import { Article } from '../shared/models/Article.model';
+import { Room } from '../shared/models/Room.model';
+import { ManyToManoService } from '../shared/services/many-to-mano.service';
 
 @Component({
   selector: 'app-inspiration',
@@ -7,6 +10,11 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
   styleUrls: ['./inspiration.component.scss'],
 })
 export class InspirationComponent implements OnInit {
+  articles: Article[] = [];
+  rooms: Room[] = [];
+
+
+
   @ViewChild('nav', { read: DragScrollComponent }) ds!: DragScrollComponent;
 
   moveLeft() {
@@ -27,7 +35,22 @@ export class InspirationComponent implements OnInit {
       this.ds.moveTo(3);
     }, 0);
   }
-  constructor() {}
+  constructor(private manyToManyService : ManyToManoService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getArticles();
+    this.getRooms();
+  }
+
+  getArticles(): void {
+    this.manyToManyService.getArticles()
+    .subscribe(articles => this.articles = articles);
+  }
+
+  getRooms(): void {
+    this.manyToManyService.getRooms()
+    .subscribe(rooms => this.rooms = rooms);
+  }
+  
+
 }
