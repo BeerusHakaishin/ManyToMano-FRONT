@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
   selected = '';
   articles: Article[] = [];
   rooms: Room[] = [];
+  articlesSolded: Article[] = [];
   imageUrl : string = imageUrl;
 
   constructor(private manyToManyService : ManyToManoService){}
@@ -20,6 +21,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.getArticles();
     this.getRooms();
+    this.getSoldedArticles();
   }
 
   getArticles(): void {
@@ -30,6 +32,11 @@ export class DashboardComponent implements OnInit {
   getRooms(): void {
     this.manyToManyService.getRooms()
     .subscribe(rooms => this.rooms = rooms);
+  }
+
+  getSoldedArticles(): void {
+    this.manyToManyService.getSoldedArticles()
+    .subscribe(articlesSolded => this.articlesSolded = articlesSolded);
   }
   
 }
