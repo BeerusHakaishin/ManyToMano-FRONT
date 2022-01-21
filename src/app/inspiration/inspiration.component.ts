@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
-import { Article } from '../shared/models/Article.model';
-import { Room } from '../shared/models/Room.model';
 import { imageUrl } from 'src/environments/environment';
+import { Article } from '../shared/models/Article.model';
+import { Inspiration } from '../shared/models/Inspiration.model';
 import { ManyToManoService } from '../shared/services/many-to-mano.service';
 
 @Component({
@@ -11,16 +11,15 @@ import { ManyToManoService } from '../shared/services/many-to-mano.service';
   styleUrls: ['./inspiration.component.scss'],
 })
 export class InspirationComponent implements OnInit {
-  articles: Article[] = [];
-  rooms: Room[] = [];
-
-
   trackInspiration(index: any, inspiration: { id: any }) {
     console.log(inspiration);
     return inspiration ? inspiration.id : undefined;
   }
 
+  articles: Article[] = [];
+  inspirations: Inspiration[] = [];
 
+  constructor(private inspirationService: ManyToManoService) {}
 
   @ViewChild('nav', { read: DragScrollComponent }) ds!: DragScrollComponent;
   imageUrl: string = imageUrl;
@@ -44,21 +43,19 @@ export class InspirationComponent implements OnInit {
     }, 0);
   }
 
-  constructor(private manyToManyService : ManyToManoService) {}
-
   ngOnInit(): void {
     this.getArticles();
-    this.getRooms();
+    this.getInspirations();
   }
 
   getArticles(): void {
-    this.manyToManyService.getArticles()
-    .subscribe(articles => this.articles = articles);
+    this.inspirationService
+      .getArticles()
+      .subscribe((articles) => (this.articles = articles));
   }
-
-  getRooms(): void {
-    this.manyToManyService.getRooms()
-    .subscribe(rooms => this.rooms = rooms);
+  getInspirations(): void {
+    this.inspirationService
+      .getAllInspirations()
+      .subscribe((inspirations) => (this.inspirations = inspirations));
   }
-
 }
