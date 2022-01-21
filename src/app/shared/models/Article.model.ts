@@ -3,7 +3,7 @@ export class Article {
     name!: string;
     price!: number;
     on_sale?: boolean;
-    image_url!: string;
+    imageUrl!: string;
     details_image_url!: string;
     evaluation!: number;
     category_id!: number;
@@ -16,7 +16,7 @@ export class Article {
              this.id = id;
              this.name = name;
              this.price = price;
-             this.image_url = image_url;
+             this.imageUrl = image_url;
              this.details_image_url = details_image_url;
              this.evaluation = evaluation;
              this.category_id = category_id;

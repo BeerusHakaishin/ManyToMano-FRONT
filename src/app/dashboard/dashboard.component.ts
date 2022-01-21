@@ -26,7 +26,8 @@ export class DashboardComponent implements OnInit {
 
   getArticles(): void {
     this.manyToManyService.getArticles()
-    .subscribe(articles => this.articles = articles);
+    .subscribe(articles => {this.articles = articles;console.log(this.articles)});
+    
   }
 
   getRooms(): void {
